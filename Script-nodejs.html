@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Bot Discord Uptimer">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Script nodejs</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Script-nodejs.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.0.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/ffa4a847ef17d93656b29de1c9104940_150.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Script nodejs">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-e466"><div class="u-clearfix u-sheet u-sheet-1" bis_skin_checked="1">
+        <a href="https://nicepage.com" class="u-image u-logo u-image-1" data-image-width="128" data-image-height="128">
+          <img src="images/ffa4a847ef17d93656b29de1c9104940_150.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;" bis_skin_checked="1">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container" bis_skin_checked="1">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Script-nodejs.html" style="padding: 10px 20px;">Script node.js</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Script-HTML.html" style="padding: 10px 20px;">Script HTML</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse" bis_skin_checked="1">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav" bis_skin_checked="1">
+              <div class="u-inner-container-layout u-sidenav-overflow" bis_skin_checked="1">
+                <div class="u-menu-close" bis_skin_checked="1"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html" style="padding: 10px 20px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Script-nodejs.html" style="padding: 10px 20px;">Script node.js</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Script-HTML.html" style="padding: 10px 20px;">Script HTML</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70" bis_skin_checked="1"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-align-center u-clearfix u-section-1" id="sec-ed77">
+      <div class="u-clearfix u-sheet u-sheet-1" bis_skin_checked="1">
+        <h1 class="u-text u-text-default u-text-1">Bot Discord Uptimer</h1>
+        <p class="u-text u-text-2">Kalian Bisa Uptimer Bot Atau Website Dengan Script Bot Uptimer Ini<br>Kalian Bisa Copy Code Index.js nya<br>require("dotenv").config();<br>const { Client, Collection } = require("discord.js");<br>const UrlsConfig = require("./database/models/UrlsConfig");<br>const fetchProjects = require("./fetchProjects");<br>const { timeout, disable_fetching } = require("./config.json");<br>const client = new Client({<br> disableEveryone: true,<br>});<br>(async () =&gt; {<br> await require("./database/connect")();<br> let pros = await UrlsConfig.find();<br> client.commands = new Collection();<br> client.aliases = new Collection();<br> client.projectsSize = 0;<br> client.projects = pros.map((p) =&gt; p.projectURL);<br> UrlsConfig.countDocuments({}, async (err, total) =&gt; {<br> client.projectsSize = total;<br> ["command", "events"].forEach((handler) =&gt; {<br> require(`./handlers/${handler}`)(client);<br> });<br> await client.login(process.env.BOT_TOKEN);<br> if (!disable_fetching) fetchProjects(client.projects, client);<br> });<br>})();<br>// pinging<br>setInterval(async () =&gt; {<br> UrlsConfig.countDocuments({}, (err, total) =&gt; {<br> client.projectsSize = total;<br> client.user.setActivity(`${total} Project(s)`, {<br> type: "WATCHING",<br> });<br> });<br> if (!disable_fetching) fetchProjects(client.projects, client);<br>}, timeout);
+        </p>
+        <a href="https://replit.com/@Robotblue1/Uptimer-Bot?v=1" class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">atau kalian bisa fork projectnya di replit</a>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-4291"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1" bis_skin_checked="1">
+        <p class="u-small-text u-text u-text-variant u-text-1">© Copyright by <a href="https://discord.gg/QpTZGy35nw" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" target="_blank">Fort All</a>
+        </p>
+      </div></footer>
+      <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '990a941bcdf7e0213c664cd74c384123d812a14b';
+        window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
+  </body>
+</html>

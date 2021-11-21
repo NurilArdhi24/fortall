@@ -1,0 +1,29 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 177px;
+}
+
+.u-section-1 .u-text-1 {
+  margin: 4px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 900;
+  font-size: 0.9375rem;
+  margin: 4px auto 60px;
+}.u-section-2 .u-sheet-1 {
+  min-height: 177px;
+}
+
+.u-section-2 .u-text-1 {
+  font-weight: 900;
+  margin: 60px auto 0;
+}
+
+.u-section-2 .u-btn-1 {
+  border-style: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin: 30px auto 60px;
+}
